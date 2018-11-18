@@ -33,6 +33,23 @@ module.exports = function(eleventyConfig) {
     });
   });
 
+  // eleventyConfig.addCollection("items", function(collection) {
+  //   var items = {
+  //     a: {
+  //       name: "first name"
+  //     },
+  //     b: {
+  //       name: "second name"
+  //     }
+  //   }
+  //   return items
+  // });
+
+  eleventyConfig.addCollection("items", function(collection) {
+    return {}
+  });
+
+
   eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
 
   eleventyConfig.addPassthroughCopy("img");
